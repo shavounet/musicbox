@@ -15,6 +15,7 @@
     <meta charset="utf-8"/>
 </head>
     <body>
+        <h1>Lecteur de partitions</h1>
         <textarea id="partition">
 S^BabG-|BabG-|ggba.-|
 S,BabG-|BabG-|ggba.-|
@@ -22,5 +23,25 @@ AaaAB|D^-C^-|Ad^c^B-|
 Be^d^C^-|C^f^e^D^d^d^|C^D^E^-|
         </textarea>
         <button id="play">play</button>
+        <h2>Mode d'emploi</h2>
+        <h3>Notes</h3>
+        <ul>
+            <li>Utilisation des notations anglaises (A-G)</li>
+            <li>Note par défaut = noire ; pour une croche utiliser la lettre minuscule</li>
+            <li>Silence : "."</li>
+            <li>Tous les autres caractères sont ignorés (dont le retour à la ligne)</li>
+        </ul>
+        <h3>Symboles</h3>
+        <ul>
+            <li>L'ajout d'un symbole après une note permet de la modifier ; il est possible de cumuler des symboles différents.</li>
+            <li>"#" : dièse (bémol non disponible)</li>
+            <li>"-" : double la note (noire > blanche ; croche > noire)</li>
+            <li>"," et "^" : octave du dessous/dessus</li>
+            <li>"|" : aide pour la mesure des temps (dans la console navigateur)</li>
+        </ul>
+        <h3>Modifications permanantes</h3>
+        <ul>
+            <li>"S" + symbole : permet de changer un paramètre par défaut jusqu'à la fin (pour l'instant, uniquement les octaves)</li>
+        </ul>
     </body>
 </html>

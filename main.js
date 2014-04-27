@@ -137,7 +137,7 @@ window.addEventListener('load', function(event) {
         document.getElementById('saved').innerHTML = '(rien ici)';
     });
 
-    if(localStorage.getItem('current-partition') === undefined || localStorage.getItem('current-partition') === '') {
+    if(localStorage.getItem('current-partition') === null || localStorage.getItem('current-partition') === '') {
         document.getElementById('load').setAttribute("disabled", true);
     } else {
         document.getElementById('saved').innerHTML = localStorage.getItem('current-partition');

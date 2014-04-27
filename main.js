@@ -120,4 +120,28 @@ window.addEventListener('load', function(event) {
         playmusic(music, guitar);
 */
     });
+
+    document.getElementById('save').addEventListener("click",function(e){
+        localStorage.setItem('current-partition', document.getElementById('partition').value);
+        document.getElementById('load').removeAttribute("disabled");
+        document.getElementById('saved').innerHTML = localStorage.getItem('current-partition');
+    });
+
+    document.getElementById('load').addEventListener("click",function(e){
+        document.getElementById('partition').value = localStorage.getItem('current-partition');
+    });
+
+    document.getElementById('clear').addEventListener("click",function(e){
+        localStorage.setItem('current-partition', '');
+        document.getElementById('load').setAttribute("disabled", true);
+        document.getElementById('saved').innerHTML = '(rien ici)';
+    });
+
+    if(localStorage.getItem('current-partition') === undefined || localStorage.getItem('current-partition') === '') {
+        document.getElementById('load').setAttribute("disabled", true);
+    } else {
+        document.getElementById('saved').innerHTML = localStorage.getItem('current-partition');
+    }
+
+
 });
